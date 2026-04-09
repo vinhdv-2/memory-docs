@@ -1,0 +1,72 @@
+services:
+  # Docusaurus - Documentation site
+  docusaurus:
+    build:
+      context: ./docusaurus
+      dockerfile: Dockerfile
+    container_name: docusaurus
+    ports:
+      - "${DOCS_HOST_PORT}:${DOCS_CONTAINER_PORT}"
+    volumes:
+      - ./docusaurus:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=${NODE_ENV}
+    command: npm start -- --host 0.0.0.0
+    depends_on:
+      - minio
+    networks:
+      - memory-docs-network
+
+  # MinIO - Object storage for media files
+  minio:
+    image: minio/minio:latest
+    container_name: minio
+    ports:
+      - "${MINIO_API_HOST_PORT}:${MINIO_API_CONTAINER_PORT}"      # API port
+      - "${MINIO_CONSOLE_HOST_PORT}:${MINIO_CONSOLE_CONTAINER_PORT}"  # Console port
+    volumes:
+      - minio_data:/data
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+      MINIO_REGION: ${MINIO_REGION:-us-east-1}
+      MINIO_BROWSER: on
+    command: server /data --console-address ":9001"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 20s
+      retries: 3
+    networks:
+      - memory-docs-network
+
+  # MinIO Client - Auto-create bucket on startup
+  minio-init:
+    image: minio/mc:latest
+    container_name: minio-init
+    depends_on:
+      - minio
+    environment:
+      - MINIO_ROOT_USER=${MINIO_ROOT_USER}
+      - MINIO_ROOT_PASSWORD=${MINIO_ROOT_PASSWORD}
+      - MINIO_BUCKET_NAME=${MINIO_BUCKET_NAME}
+    entrypoint: >
+      /bin/sh -c "
+      sleep 5;
+      /usr/bin/mc alias set myminio http://minio:9000 ${MINIO_ROOT_USER} ${MINIO_ROOT_PASSWORD};
+      /usr/bin/mc mb myminio/${MINIO_BUCKET_NAME} --ignore-existing;
+      /usr/bin/mc anonymous set download myminio/${MINIO_BUCKET_NAME};
+      echo 'MinIO bucket ${MINIO_BUCKET_NAME} is ready!';
+      exit 0;
+      "
+    networks:
+      - memory-docs-network
+
+networks:
+  memory-docs-network:
+    driver: bridge
+
+volumes:
+  minio_data:
+    driver: local

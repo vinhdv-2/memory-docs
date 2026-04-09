@@ -1,0 +1,206 @@
+---
+sidebar_position: 3
+---
+
+# Ví dụ đầy đủ: Tích hợp Docusaurus & MinIO
+
+Tài liệu này minh họa cách sử dụng đầy đủ các tính năng của Docusaurus kết hợp với MinIO.
+
+## 1. Hình ảnh từ MinIO
+
+Sau khi upload hình ảnh lên MinIO bucket `media`, bạn có thể nhúng vào tài liệu:
+
+### Markdown cơ bản
+```markdown
+![Logo](http://localhost:9000/media/logo.png)
+```
+
+### HTML với tùy chỉnh kích thước
+```html
+<img src="http://localhost:9000/media/banner.jpg" alt="Banner" width="800" />
+```
+
+### Hình ảnh có viền và căn giữa
+```html
+<div style={{textAlign: 'center'}}>
+  <img src="http://localhost:9000/media/diagram.png" 
+       alt="System Diagram" 
+       width="600"
+       style={{border: '1px solid #ddd', borderRadius: '4px', padding: '5px'}} />
+  <p><em>Hình 1: Sơ đồ hệ thống</em></p>
+</div>
+```
+
+## 2. Video từ MinIO
+
+Upload video (`tutorial.mp4`) lên MinIO và nhúng vào tài liệu:
+
+```html
+<video width="100%" controls>
+  <source src="http://localhost:9000/media/tutorial.mp4" type="video/mp4" />
+  Trình duyệt của bạn không hỗ trợ video.
+</video>
+```
+
+### Video với poster image
+```html
+<video width="100%" controls poster="http://localhost:9000/media/video-poster.jpg">
+  <source src="http://localhost:9000/media/demo.mp4" type="video/mp4" />
+</video>
+```
+
+## 3. File download
+
+Tạo link download cho PDF, ZIP, hoặc các file khác:
+
+```markdown
+📥 [Tải hướng dẫn PDF](http://localhost:9000/media/user-guide.pdf)
+
+📦 [Download source code](http://localhost:9000/media/project-src.zip)
+
+📊 [Excel template](http://localhost:9000/media/template.xlsx)
+```
+
+Kết quả:
+
+📥 [Tải hướng dẫn PDF](http://localhost:9000/media/user-guide.pdf)
+
+## 4. Gallery - Bộ sưu tập hình ảnh
+
+Tạo gallery với nhiều hình ảnh:
+
+```html
+<div style={{display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px'}}>
+  <img src="http://localhost:9000/media/image1.jpg" alt="Image 1" style={{width: '100%'}} />
+  <img src="http://localhost:9000/media/image2.jpg" alt="Image 2" style={{width: '100%'}} />
+  <img src="http://localhost:9000/media/image3.jpg" alt="Image 3" style={{width: '100%'}} />
+  <img src="http://localhost:9000/media/image4.jpg" alt="Image 4" style={{width: '100%'}} />
+  <img src="http://localhost:9000/media/image5.jpg" alt="Image 5" style={{width: '100%'}} />
+  <img src="http://localhost:9000/media/image6.jpg" alt="Image 6" style={{width: '100%'}} />
+</div>
+```
+
+## 5. Code blocks với syntax highlighting
+
+Docusaurus hỗ trợ syntax highlighting cho nhiều ngôn ngữ:
+
+### JavaScript
+```javascript
+const fetchImage = async (imageName) => {
+  const imageUrl = `http://localhost:9000/media/${imageName}`;
+  const response = await fetch(imageUrl);
+  return response.blob();
+};
+```
+
+### Python
+```python
+import requests
+
+def download_from_minio(filename):
+    url = f"http://localhost:9000/media/{filename}"
+    response = requests.get(url)
+    with open(filename, 'wb') as f:
+        f.write(response.content)
+```
+
+### Bash
+```bash
+# Download file từ MinIO
+curl http://localhost:9000/media/image.png -o image.png
+
+# Hoặc với custom domain (nếu đã setup)
+curl http://minio.memory.local:9000/media/image.png -o image.png
+
+# List files trong bucket (cần mc client)
+docker exec minio-init mc ls myminio/media
+```
+
+## 6. Admonitions - Hộp cảnh báo
+
+:::note Ghi chú
+Tất cả các file upload lên bucket `media` đều có thể truy cập công khai tại `http://localhost:9000/media/`
+:::
+
+:::tip Mẹo
+Đặt tên file không dấu và không khoảng trắng để tránh lỗi URL encoding
+:::
+
+:::info Thông tin
+MinIO bucket `media` đã được cấu hình chế độ `download` - cho phép tải file mà không cần authentication
+:::
+
+:::caution Cảnh báo
+Đổi username/password mặc định của MinIO trước khi deploy production!
+:::
+
+:::danger Nguy hiểm
+Không upload file có thông tin nhạy cảm lên bucket public!
+:::
+
+## 7. Multiple formats để nhúng media
+
+Bạn có thể nhúng hình ảnh từ MinIO theo nhiều cách:
+
+**Format Markdown:**
+```markdown
+![Image](http://localhost:9000/media/screenshot.png)
+```
+
+**Format HTML:**
+```html
+<img src="http://localhost:9000/media/screenshot.png" 
+     alt="Screenshot" 
+     width="600" />
+```
+
+**Format HTML với style:**
+```html
+<img src="http://localhost:9000/media/screenshot.png" 
+     alt="Screenshot"
+     style="width: 600px;" />
+```
+
+## 8. Tables - Bảng
+
+Danh sách file trong MinIO:
+
+| File | Loại | Kích thước | URL |
+|------|------|------------|-----|
+| logo.png | Hình ảnh | 45 KB | http://localhost:9000/media/logo.png |
+| tutorial.mp4 | Video | 12 MB | http://localhost:9000/media/tutorial.mp4 |
+| guide.pdf | Document | 2.3 MB | http://localhost:9000/media/guide.pdf |
+
+## 9. Mermaid Diagrams
+
+Tạo biểu đồ trực tiếp trong Markdown:
+
+**Ví dụ sơ đồ luồng dữ liệu:**
+- Người dùng Upload file lên MinIO Console
+- MinIO Server lưu trữ vào Bucket media
+- Docusaurus nhúng media thông qua URL: localhost:9000/media/[filename]
+- Lấy file từ Bucket
+
+## 10. Math Equations
+
+Sử dụng KaTeX để hiển thị công thức toán học:
+
+Inline: $E = mc^2$
+
+Block:
+
+$$
+\frac{n!}{k!(n-k)!} = \binom{n}{k}
+$$
+
+## Kết luận
+
+Với sự kết hợp của Docusaurus và MinIO, bạn có một hệ thống tài liệu hoàn chỉnh với:
+
+- ✅ Viết tài liệu dễ dàng bằng Markdown
+- ✅ Lưu trữ media không giới hạn
+- ✅ Hot reload, cập nhật real-time
+- ✅ SEO-friendly, responsive design
+- ✅ Deploy đơn giản với Docker
+
+**Chúc bạn viết tài liệu vui vẻ! 📝🚀**
