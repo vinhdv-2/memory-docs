@@ -18,7 +18,29 @@ I am a web developer with 4 years of experience working on outsourcing projects 
 
 ### **WORK EXPERIENCE**
 
-#### **1. Project: Well - Centralized Inquiry Management System**
+
+#### **Second Memory - hệ thống quản lý tri thức số cá nhân**
+*(July 23, 2023 – Current | Role: Solo Developer | Team size: 1)*
+
+* **Description:** This is a personal knowledge management system. Its purpose is to systematically organize, store, and utilize experience. It serves as a foundation for developing personalized AI assistants.
+
+* **Technical:** Nextjs, Laravel 11, PostgreSQL, Redis, Docker, Minio, Reverb, Queue.
+
+* **Responsibilities & Implementations:**
+
+    *   Content management, rich text.
+
+    *   Content change history management.
+
+    *   Multitasking file management, fast data processing, automatic data cleanup, clean architecture, real-time notifications.
+
+    *   Fast authentication, simple management, detailed action-level permissions, device management, detailed access revocation by unit.
+
+    *   Automated installation, configuration, environment building, backup & restore across multiple cloud storage platforms.
+
+    *   Auto test with phpunit
+
+#### **Project: Well - Centralized Inquiry Management System**
 *(01/2026 – Current | Role: Developer | Team size: 4)*
 *   **Description:** Support requests (inquiry) were scattered across multiple channels (Do System, Rakuten RMS, Jichitai Mypage), causing the risk of missed responses. The goal is to build a centralized system to synchronize and manage all inquiries.
 *   **Technical:** Python 3.10+, FastAPI, SQLAlchemy 2.0, PostgreSQL (asyncpg), Next.js 16, React 19, TypeScript, Tailwind CSS v4, Zustand, TanStack React Query.
@@ -28,7 +50,7 @@ I am a web developer with 4 years of experience working on outsourcing projects 
     *   **Core Modules:** Develop Mail list (centralized filtering), Mail detail (response processing), and Mail history (tracking exchange history).
     *   **Settings:** Build parameter and system configuration module for administrators.
 
-#### **2. Project: Furusato Seikatsu - E-commerce & Tax Donation SaaS Platform**
+#### **Project: Furusato Seikatsu - E-commerce & Tax Donation SaaS Platform**
 *(12/2024 – 12/2025 | Role: Developer | Team size: 10)*
 *   **Description:** Is a SaaS system serving the Japanese local tax program (Furusato-nozei). Multi-tenant architecture, multi-layer authorization for many operating units (SSC, EC, Donate, Integration).
 *   **Technical:** Laravel, MySQL, Redis, Next.js, AWS S3, Docker, PHPUnit, Postman, JMeter.
@@ -40,7 +62,7 @@ I am a web developer with 4 years of experience working on outsourcing projects 
     *   **Testing:** Write Unit Tests (PHPUnit) and conduct Performance Tests (JMeter) for the Purchase flow during peak seasons.
     *   **Website:** https://furusato-seikatsu.jp/
 
-#### **3. Project: ERP System - Resource Management (Freelance)**
+#### **Project: ERP System - Resource Management (Freelance)**
 *(06/2024 – 12/2024 | Role: Web Developer | Team size: 4)*
 *   **Description:** Is an ERP system that allows enterprise resource management: Human resources, warehouse, customers, departments.
 *   **Technical:** Laravel, PostgreSQL, ReactJS, starUML, PHPUnit.
@@ -49,7 +71,7 @@ I am a web developer with 4 years of experience working on outsourcing projects 
     *   Build and edit API modules: Human resources, warehouse, customers, departments.
     *   Unit test, integration test.
 
-#### **4. Project: Fintech System (Rikkeisoft)**
+#### **Project: Fintech System (Rikkeisoft)**
 *(01/2024 – 06/2024 | Role: Full-Stack Web Developer | Team size: 8)*
 *   **Description:** Is a Fintech system for banks and financial institutions to manage invoices, guarantees, capital mobilization orders, and payment reconciliation.
 *   **Technical:** Yii2, ReactJS, TypeScript, PostgreSQL, Docker, PHPUnit, Postman.
@@ -59,7 +81,7 @@ I am a web developer with 4 years of experience working on outsourcing projects 
     *   Implement features for managing invoices, guarantees and early capitalization.
     *   Unit test, integration test.
 
-#### **5. Project: ERP System - Resource Management (Rikkeisoft)**
+#### **Project: ERP System - Resource Management (Rikkeisoft)**
 *(06/2023 – 12/2023 | Role: Full-Stack Web Developer | Team size: 7)*
 *   **Description:** Is an ERP system that helps businesses manage resources: Purchase orders, human resources, departments, banks, customers, capital, taxes, revenue, profits,...
 *   **Technical:** Yii2, ReactJS, Jquery, Docker, PostgreSQL.
@@ -68,7 +90,7 @@ I am a web developer with 4 years of experience working on outsourcing projects 
     *   Build module calculate cost of goods sold, additional fees on sales documents, tax settlement, periodic cash flow statistics (capital, deposits, loans), cash flow forecasting and warning tool over time.
     *   Unit test
 
-#### **6. Project: Invoice Management & Linking System (Rikkeisoft)**
+#### **Project: Invoice Management & Linking System (Rikkeisoft)**
 *(12/2022 – 05/2023 | Role: Full-Stack Web Developer | Team size: 8)*
 *   **Description:** Is a system that provides services for managing invoices, other documents, and linking invoices for businesses.
 *   **Technical:** Yii2, ReactJS, TypeScript, PostgreSQL, VMS, PHPUnit, Postman.
@@ -76,7 +98,7 @@ I am a web developer with 4 years of experience working on outsourcing projects 
     *   Build API and UI manager documents others, invoices, payment customers, departments and users, link invoices and other documents.
     *   Unit Test and integration test.
 
-#### **7. Project: Public Show Ticket System (Rikkeisoft)**
+#### **Project: Public Show Ticket System (Rikkeisoft)**
 *(04/2022 – 12/2022 | Role: Full-Stack Web Developer | Team size: 6)*
 *   **Description:** Is a system for selling tickets to public shows, choosing seats in shows, booking tickets online, managing tickets, and managing members.
 *   **Technical:** NuxtJS, NodeJS, AWS services, PostgreSQL, JMeter.
@@ -85,7 +107,7 @@ I am a web developer with 4 years of experience working on outsourcing projects 
     *   Use CloudWatch to investigate user operation errors.
     *   Performance Test, Unit Test, Integration Test.
 
-#### **8. Project: E-learning Course System (Rikkeisoft)**
+#### **Project: E-learning Course System (Rikkeisoft)**
 *(02/2022 – 04/2022 | Role: Full-Stack Web Developer | Team size: 3)*
 *   **Description:** Is an e-commerce system selling broadcasting courses based on CMS EC-cube 4.
 *   **Technical:** HTML, CSS, MySQL, EC-cube4, Bootstrap, Photoshop CS6.
@@ -94,7 +116,7 @@ I am a web developer with 4 years of experience working on outsourcing projects 
     *   Customize Admin CMS to manage email, page, membership, payment and course.
     *   Unit Test.
 
-#### **9. Project: FeSaStore - E-commerce system (Graduation project)**
+#### **Project: FeSaStore - E-commerce system (Graduation project)**
 *(10/2021 – 12/2021 | Role: Team Lead & Full-Stack Developer | Team size: 7)*
 *   **Description:** Is an e-commerce system. Seo and online sales of fashion products.
 *   **Technical:** Laravel, Bootstrap 4, MySQL, HTML, CSS, jQuery, starUml, mockPlus.
@@ -109,7 +131,7 @@ I am a web developer with 4 years of experience working on outsourcing projects 
     *   [Link report](https://docs.google.com/document/d/1wtkubCznJDa8UcCZPNZv8uLM9qnaQzOl/edit?
 usp=sharing&;ouid=114118641617712971338&rtpof=true&sd=true)
 
-#### **10. Project: Web Scraper Tool (CMT Dragon)**
+#### **Project: Web Scraper Tool (CMT Dragon)**
 *(09/2021 – 11/2021 | Role: Web Scraper Developer & Team Lead | Team size: 4)*
 *   **Description:** Write and use tools to crawl data of investor banks, real estate, recruitment, capital calling services, email, linkedin,...
 *   **Technical:** Python, PHP, Oracle, Mailchimp.
