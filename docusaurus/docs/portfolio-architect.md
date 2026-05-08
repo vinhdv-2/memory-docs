@@ -47,7 +47,7 @@ I am a web developer with 4 years of experience working on outsourcing projects 
 *   **Responsibilities & Implements:**
     *   **Analysis & Design:** Collect business requirements, design database to ensure integrity and scalability.
     *   **Authentication:** Build authentication and authorization flow for internal systems.
-    *   **Core Modules:** Develop Mail list (centralized filtering), Mail detail (response processing), and Mail history (tracking exchange history).
+    *   **Core Modules:** Develop Email management, details, history, permission configuration, configuration of email elements: tags, notes, flags, response time, working hours, etc.
     *   **Settings:** Build parameter and system configuration module for administrators.
 
 #### **Project: Furusato Seikatsu - E-commerce & Tax Donation SaaS Platform**
