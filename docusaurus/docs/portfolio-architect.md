@@ -1,65 +1,42 @@
 # **VINH DO VAN**
-**Senior Web Developer | System Design Practitioner**
+**Middle Web Developer | System Design Practitioner**
 
 ---
 
 ### **CONTACT INFORMATION**
 - **Phone:** 0987862634
 - **Email:** dovanvinhwao@gmail.com
-- **Address:** Phu Nhuan, Ho Chi Minh City
-- **Goal:** Become a Technical Leader and System Designer in the next 3 years.
+- **Address:** An Nhon ward, Ho Chi Minh City
 
 ---
 
 ### **PROFESSIONAL SUMMARY**
-I am a web developer with 4 years of experience working on outsourcing projects for Japanese clients. I started taking professional actions earlier than usual. My career is built on observing and solving real-world system operational problems. I prioritize stability, maintainability, and lean code. I have knowledge of requirements analysis and design. I am responsible for Front-End, Back-End, and Database in website development, maintenance, and optimization. I am also capable of working independently as well as effectively in a team. My goal in the next 3 years is to become a technical team leader and system designer.
+Results-driven Web Developer with 4 years of experience in outsourcing projects for Japanese clients. Strong expertise in PHP/Laravel ecosystem, database design & optimization, and system architecture. Proven ability to deliver stable, maintainable web applications from requirements analysis. Recently expanded into modern full-stack development (Next.js, FastAPI) with strong problem-solving skills and AI-assisted learning. Passionate about building scalable systems and knowledge management tools.
 
 ---
 
 ### **WORK EXPERIENCE**
 
-
-#### **Second Memory - hệ thống quản lý tri thức số cá nhân**
-*(July 23, 2023 – Current | Role: Solo Developer | Team size: 1)*
-
-* **Description:** This is a personal knowledge management system. Its purpose is to systematically organize, store, and utilize experience. It serves as a foundation for developing personalized AI assistants.
-
-* **Technical:** Nextjs, Laravel 11, PostgreSQL, Redis, Docker, Minio, Reverb, Queue.
-
-* **Responsibilities & Implementations:**
-
-    *   Content management, rich text.
-
-    *   Content change history management.
-
-    *   Multitasking file management, fast data processing, automatic data cleanup, clean architecture, real-time notifications.
-
-    *   Fast authentication, simple management, detailed action-level permissions, device management, detailed access revocation by unit.
-
-    *   Automated installation, configuration, environment building, backup & restore across multiple cloud storage platforms.
-
-    *   Auto test with phpunit
-
 #### **Project: Well - Centralized Inquiry Management System**
 *(01/2026 – Current | Role: Developer | Team size: 4)*
-*   **Description:** Support requests (inquiry) were scattered across multiple channels (Do System, Rakuten RMS, Jichitai Mypage), causing the risk of missed responses. The goal is to build a centralized system to synchronize and manage all inquiries.
+*   **Description:** Centralized system to synchronize and manage customer inquiries from multiple Japanese platforms (Do System, Rakuten RMS, Jichitai Mypage).
 *   **Technical:** Python 3.10+, FastAPI, SQLAlchemy 2.0, PostgreSQL (asyncpg), Next.js 16, React 19, TypeScript, Tailwind CSS v4, Zustand, TanStack React Query.
 *   **Responsibilities & Implements:**
-    *   **Analysis & Design:** Collect business requirements, design database to ensure integrity and scalability.
-    *   **Authentication:** Build authentication and authorization flow for internal systems.
-    *   **Core Modules:** Develop Email management, details, history, permission configuration, configuration of email elements: tags, notes, flags, response time, working hours, etc.
-    *   **Settings:** Build parameter and system configuration module for administrators.
+    *   Participated in requirements analysis and database design to ensure data integrity and scalability.
+    *   Developed authentication & authorization system for internal use.
+    *   Built core modules: Email management, inquiry history, tagging, notes, flags, and SLA tracking.
+    *   Implemented system configuration and admin settings.
 
 #### **Project: Furusato Seikatsu - E-commerce & Tax Donation SaaS Platform**
 *(12/2024 – 12/2025 | Role: Developer | Team size: 10)*
-*   **Description:** Is a SaaS system serving the Japanese local tax program (Furusato-nozei). Multi-tenant architecture, multi-layer authorization for many operating units (SSC, EC, Donate, Integration).
-*   **Technical:** Laravel, MySQL, Redis, Next.js, AWS S3, Docker, PHPUnit, Postman, JMeter.
+*   **Description:** Multi-tenant SaaS platform for Japanese Furusato-nozei (hometown tax donation) program.
+*   **Technical:** Laravel, MySQL, Redis, Next.js, AWS S3, Docker, PHPUnit
 *   **Responsibilities & Implements:**
-    *   **System Design:** Analyze e-commerce business and specialized tax characteristics; design database fragmented by site/locality. Organize data to support many types of departments (SSC, EC, Donate, Integration).
-    *   **Backend:** Build core logic for managing product variations, stock, and integrating delivery tracking.
-    *   **Authorization:** Implement multi-layer authorization middleware based on Role and City code.
-    *   **File Processing:** Optimize file uploads to AWS S3 using Presigned URLs; handle CSV Import/Export and generate PDF certificates.
-    *   **Testing:** Write Unit Tests (PHPUnit) and conduct Performance Tests (JMeter) for the Purchase flow during peak seasons.
+    *   Contributed to multi-tenant database design fragmented by locality and business units.
+    *   Developed core e-commerce features: product variations, inventory management, and delivery integration.
+    *   Implemented multi-layer authorization using Role and City code.
+    *   Optimized large file uploads to AWS S3 using Presigned URLs; handled CSV import/export and PDF generation.
+    *   Conducted performance testing with JMeter and wrote unit tests with PHPUnit.
     *   **Website:** https://furusato-seikatsu.jp/
 
 #### **Project: ERP System - Resource Management (Freelance)**
@@ -67,19 +44,33 @@ I am a web developer with 4 years of experience working on outsourcing projects 
 *   **Description:** Is an ERP system that allows enterprise resource management: Human resources, warehouse, customers, departments.
 *   **Technical:** Laravel, PostgreSQL, ReactJS, starUML, PHPUnit.
 *   **Responsibilities & Implements:**
-    *   Design Use case, Site map and Database (ERD, schema).
-    *   Build and edit API modules: Human resources, warehouse, customers, departments.
-    *   Unit test, integration test.
+    *   Designed Use Cases, Site Map, and Database (ERD).
+    *   Developed and maintained core modules: HR, Warehouse, Customers, Departments.
+    *   Wrote unit and integration tests.
 
 #### **Project: Fintech System (Rikkeisoft)**
 *(01/2024 – 06/2024 | Role: Full-Stack Web Developer | Team size: 8)*
 *   **Description:** Is a Fintech system for banks and financial institutions to manage invoices, guarantees, capital mobilization orders, and payment reconciliation.
 *   **Technical:** Yii2, ReactJS, TypeScript, PostgreSQL, Docker, PHPUnit, Postman.
 *   **Responsibilities & Implements:**
-    *   Design UI, database and source code structure.
-    *   Write basic design document and detail design document.
-    *   Implement features for managing invoices, guarantees and early capitalization.
-    *   Unit test, integration test.
+    *   Participated in UI/UX design, database design, and system architecture.
+    *   Developed features for invoice, guarantee, and capital mobilization management.
+    *   Wrote basic & detailed design documents and performed unit/integration testing.
+
+------------------------------------------------------------------------
+
+#### **Second Memory - Personal Digital Knowledge Management System**
+*(July 23, 2023 – Current | Role: Solo Developer | Team size: 1)*
+* **Description:** A personal knowledge management system, a platform for developing personalized AI assistants in the future.
+* **Technical:** Nextjs, Laravel 11, PostgreSQL, Redis, Docker, Minio, Reverb, Queue.
+* **Responsibilities & Implementations:**
+    *   Automated installation, configuration, environment building, backup & restore across multiple cloud storage platforms.
+    *   Multitasking file management, fast data processing, automatic data cleanup, clean architecture, real-time notifications.
+    *   Fast authentication, simple management, detailed action-level permissions, device management, detailed access revocation by unit.
+    *   Content management, rich text.
+    *   Content change history management.
+    *   Wrote automated tests using PHPUnit.
+    *   [Link source](https://github.com/WAIMC/FeSaStore)
 
 #### **Project: ERP System - Resource Management (Rikkeisoft)**
 *(06/2023 – 12/2023 | Role: Full-Stack Web Developer | Team size: 7)*
@@ -128,8 +119,7 @@ I am a web developer with 4 years of experience working on outsourcing projects 
     *   Build an organization according to the MVC model, applying design patterns
     *   Write test case, unit test
     *   [Link source](https://github.com/WAIMC/FeSaStore)
-    *   [Link report](https://docs.google.com/document/d/1wtkubCznJDa8UcCZPNZv8uLM9qnaQzOl/edit?
-usp=sharing&;ouid=114118641617712971338&rtpof=true&sd=true)
+    *   [Link report](https://docs.google.com/document/d/1wtkubCznJDa8UcCZPNZv8uLM9qnaQzOl/edit?usp=sharing&;ouid=114118641617712971338&rtpof=true&sd=true)
 
 #### **Project: Web Scraper Tool (CMT Dragon)**
 *(09/2021 – 11/2021 | Role: Web Scraper Developer & Team Lead | Team size: 4)*
@@ -141,9 +131,10 @@ usp=sharing&;ouid=114118641617712971338&rtpof=true&sd=true)
     *   Register to establish a private non-prot organization SAM Foundation
     *   Compose email to provide fundraising services
     *   Use email sending tool, connect linkedin
-*   **Link report:** https://drive.google.com/file/d/1h0UJa4icG2bEYFSYzklsI2as4AWTQfI1/view?usp=sharing
+*   [Link report:](https://drive.google.com/file/d/1h0UJa4icG2bEYFSYzklsI2as4AWTQfI1/view?usp=sharing)
 
 
 ### **EDUCATION & CORE SKILLS**
-**Education:** Graduated with honors in Website Design from FPT Polytechnic, received scholarships for outstanding students throughout all semesters.
-* **Technical skills:** Proficiently control the software development lifecycle through languages (Python, PHP, JavaScript), Frameworks (FastAPI, Laravel, ReactJS, Next.js) and Database Management Systems (PostgreSQL, MySQL).
+**Education:** Graduated with honors in Website Design from FPT Polytechnic (2019 – 2022), Received scholarships for academic excellence every semester.
+* **Technical skills:**
+    * **Core Expertise**: PHP (Laravel, Yii2), Database (PostgreSQL, MySQL), REST API, Git, Docker, Testing (PHPUnit), System Architecture, Database Optimization
