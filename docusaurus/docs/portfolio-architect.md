@@ -135,6 +135,6 @@ Results-driven Web Developer with 4 years of experience in outsourcing projects 
 
 
 ### **EDUCATION & CORE SKILLS**
-**Education:** Graduated with honors in Website Design from FPT Polytechnic (2019 – 2022), Received scholarships for academic excellence every semester.
+**Education:** ~~Graduated with honors in Website Design from FPT Polytechnic (2019 – 2022), Received scholarships for academic excellence every semester.~~
 * **Technical skills:**
     * **Core Expertise**: PHP (Laravel, Yii2), Database (PostgreSQL, MySQL), REST API, Git, Docker, Testing (PHPUnit), System Architecture, Database Optimization
