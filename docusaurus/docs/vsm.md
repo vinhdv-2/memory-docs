@@ -21,8 +21,10 @@
   Hoặc cấu hình bridged adapter nó giống như VM một máy riêng trong LAN, nhưng VM cần có IP riêng trong mạng nội bộ
   * Tạo ssh key cho vsm và paste chúng vào github để dùng sau
   * CI/CD với github (nơi chứa source), máy ảo nằm sau router nội bộ, github không thể gọi về máy được. Cần pull mechanism đó là cài đặt github action self-hosted runner lên máy ảo. Runner này chủ động lắng nghe github, khi có code mới nó sẽ thực hiện kéo về build, ko cần mở port modem. Hoặc sử dụng webhook tunnel như ngrok hoặc cloudflare tunnerl để tạo pipe từ internet về máy ảo. Chọn cách 1
-  * Cấu hình tài nguyên vào docker và ở trên máy ảo tải và build môi trường bằng docker
-  * 
+  * Login github, truy cập dự án muốn thực hiện, setting > action > runner > new self-hosted runner thiết lập cấu hình cho máy linux x64 lấy thông tin cấu hình token sau đó thiết lập nó trên máy ảo
+  * Trên máy ảo tải một số công cụ cần thiết như git, docker,... phân quyền để runner để sử dụng.
+  * Ở source tạo các file CI|CD, docker-compose.yml, workflow deploy để định nghĩa các bước thực thi.
+  * Sau khi hoàn tất tiến hành test thử bằng cách push code lên branch chỉ định trigger workflow deploy. Nếu deploy thành công, truy cập web bằng port 8090. Sử dụng link public IP để truy cập
 
 
 *************************
